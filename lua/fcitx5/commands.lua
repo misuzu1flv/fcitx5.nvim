@@ -107,7 +107,7 @@ M.Fcitx5UpdateMethod = function(imname, old_mode, new_mode)
     -- stylua: ignore
     local command = table.concat(vim.tbl_map(function(a)
       return fcitx5_command() .. a
-    end, { "-n", ..., "-n" }), "; ")
+    end, { "-q", ..., "-q" }), "; ")
 		lib.info("Running: " .. command)
 		return vim.split(vim.fn.system(command), "\n", { trimempty = true })
 	end
